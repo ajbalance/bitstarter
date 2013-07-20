@@ -2,13 +2,13 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
-//var fs = require('fs');
-//var outFile = 'index.html';
-//var buffer = new Buffer(fs.readFileSync(outfile);
-//var outTextStr = buffer.toString('utf-8');
+var fs = require('fs');
+var outFile = 'index.html';
+var outStringBuff = fs.readFileSync(outfile);
+var outTextStr = outStringBuffer.toString('utf-8');
 
 app.get('/', function(request, response) {
-  response.send('restesting');
+  response.send(outTextStr);
 });
 
 var port = process.env.PORT || 5000;
