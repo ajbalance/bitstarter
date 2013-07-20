@@ -4,11 +4,11 @@ app.use(express.logger());
 
 var fs = require('fs');
 var outFile = 'index.html';
-var outTextBuffer = fs.readFileSync(outfile);
-var outTextStr = buf.toString(outTextBuffer);
+var buffer = new Buffer(fs.readFileSync(outfile);
+var outTextStr = buf.toString(buffer);
 
 app.get('/', function(request, response) {
-  response.send(outTextstr);
+  response.send('restesting');
 });
 
 var port = process.env.PORT || 5000;
